@@ -12,10 +12,12 @@ public class OrderService {
     OrderRepository orderRepository;
 
     public void addOrder(Order order){
+        if(order == null) return;
         orderRepository.saveOrder(order);
     }
 
     public void addPartner(String partnerId){
+        if(partnerId == null) return;
         orderRepository.savePartner(partnerId);
     }
 
